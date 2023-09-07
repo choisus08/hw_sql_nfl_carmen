@@ -8,12 +8,12 @@ SELECT teams.stadium, teams.head_coach FROM teams WHERE teams.conference = 'NFC'
 SELECT teams.head_coach FROM teams WHERE teams.conference = 'AFC' AND teams.division = 'South'
 
 -- 4. The total number of players in the NFL
- --SELECT SUM(players.id) FROM players
-
+ SELECT COUNT(players.name) FROM players
 
 -- 5. The team names and head coaches of the NFC North and AFC East
-/*SELECT teams.name, teams.head_coach FROM teams WHERE teams.conference = 'NFC'
-AND teams.division = 'North' */
+SELECT teams.name, teams.head_coach FROM teams 
+WHERE teams.conference = 'NFC' AND teams.division = 'North'
+OR teams.conference = 'AFC' AND teams.division = 'East'
 
 -- 6. The 50 players with the highest salaries
 SELECT players.salary FROM players ORDER BY players.salary DESC LIMIT 50
