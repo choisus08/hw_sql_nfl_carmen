@@ -19,16 +19,16 @@ AND teams.division = 'North' */
 SELECT players.salary FROM players ORDER BY players.salary DESC LIMIT 50
 
 -- 7. The average salary of all NFL players
-
+SELECT AVG(players.salary) FROM players
 
 -- 8. The names and positions of players with a salary above 10_000_000
-
+SELECT players.name, players.position FROM players WHERE players.salary > 10000000
 
 -- 9. The player with the highest salary in the NFL
-
+SELECT players.name FROM players ORDER BY players.salary DESC LIMIT 1
 
 -- 10. The name and position of the first 100 players with the lowest salaries
-
+SELECT players.name, players.position FROM players ORDER BY players.salary ASC LIMIT 100
 
 -- 11. The average salary for a DE in the nfl
 
