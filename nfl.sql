@@ -16,7 +16,7 @@ WHERE teams.conference = 'NFC' AND teams.division = 'North'
 OR teams.conference = 'AFC' AND teams.division = 'East'
 
 -- 6. The 50 players with the highest salaries
-SELECT players.salary FROM players ORDER BY players.salary DESC LIMIT 50
+SELECT * FROM players ORDER BY players.salary DESC LIMIT 50
 
 -- 7. The average salary of all NFL players
 SELECT AVG(players.salary) FROM players
@@ -25,7 +25,7 @@ SELECT AVG(players.salary) FROM players
 SELECT players.name, players.position FROM players WHERE players.salary > 10000000
 
 -- 9. The player with the highest salary in the NFL
-SELECT players.name FROM players ORDER BY players.salary DESC LIMIT 1
+SELECT * FROM players ORDER BY players.salary DESC LIMIT 1
 
 -- 10. The name and position of the first 100 players with the lowest salaries
 SELECT players.name, players.position FROM players ORDER BY players.salary ASC LIMIT 100
@@ -35,7 +35,7 @@ SELECT AVG(players.salary) FROM players WHERE players.position = 'DE'
 
 -- 12. The names of all the players on the Buffalo Bills
 --USE JOIN
-SELECT players.name FROM players JOIN teams 
+SELECT * FROM players JOIN teams 
 ON players.team_id = teams.id
 WHERE teams.name = 'Buffalo Bills'
 
@@ -47,7 +47,7 @@ WHERE teams.name = 'New York Giants'
 
 -- 14. The player with the lowest salary on the Green Bay Packers
 --USE JOIN
-SELECT players.name FROM players JOIN teams
+SELECT * FROM players JOIN teams
 ON players.team_id = teams.id
 WHERE teams.name = 'Green Bay Packers'
 ORDER BY players.salary ASC
