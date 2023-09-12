@@ -94,5 +94,5 @@ WHERE country.population = 91084
 
 
 -- She's in ____________________________!
-Santa Monica
+Santa Monica, CA
 
